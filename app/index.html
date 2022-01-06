@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffe - shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body id="body">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+<!-- Start Логотип -->
+          <a class="logo" href="#">
+            <picture>
+              <source srcset="images/logo-small.png" media="(max-width: 992px)">
+              <source srcset="images/logo.png">
+               <img class="logo__img" src="images/logo.png" alt="Логотип">
+             </picture>
+          </a>
+<!-- End Логотип -->
+
+          <div class="menu-top">
+            <ul class="menu-top__list">
+              <li class="menu-top__item">
+                <a class="menu-top__link" href="#body">Главная</a>
+              </li>
+              <li class="menu-top__item">
+                <a class="menu-top__link" href="#menu">Меню</a>
+              </li>
+              <li class="menu-top__item">
+                <a class="menu-top__link" href="#stock">Акции</a>
+              </li>
+              <li class="menu-top__item">
+                <a class="menu-top__link" href="#bonus">Бонусы</a>
+              </li>
+              <li class="menu-top__item">
+                <a class="menu-top__link" href="#delivery">Доставка</a>
+              </li>
+              <li class="menu-top__item">
+                <a class="menu-top__link" href="#reviews">Отзывы</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="fas fa-bars" id="menu-btn"></div>
+
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="top">
+        <div class="container">
+          <div class="top__inner">
+            <div class="top__content">
+              <h1 class="top__title">Вкусный кофе для вас!</h1>
+              <p class="top__text">
+                Мы работаем напрямую производителями, чтобы получить самые утонченные и уникальные сорта кофе.
+              </p>
+              <p class="top__text">
+                В нашем кафе вы можете попробовать различные сорта кофе. В сочетании с уютной атмосферой и интерьером
+                кафе вы проведете незабываемое время.
+              </p>
+              <a class="btn" href="№">Перейти</a>
+            </div>
+
+            <div class="img-box">
+              <img class="top__img" src="images/latte.png" alt="Чашка кофе Латтэ" />
+            </div>
+
+            <div class="social">
+              <ul class="social__list">
+
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <i class="ri-twitter-line"></i>
+                  </a>
+                </li>
+
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <i class="ri-facebook-line"></i>
+                  </a>
+                </li>
+
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <i class="ri-instagram-line"></i>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+
+            <ul class="switch">
+              <li class="switch__item">
+                <img class="top__img" src="images/latte.png" onclick="imgSlider('images/latte.png')" alt="Чашка кофе Латтэ" />
+              </li>
+
+              <li class="switch__item">
+                <img class="top__img" src="images/esspreso.png" onclick="imgSlider('images/esspreso.png')" alt="Чашка кофе Эсспресо" />
+              </li>
+
+              <li class="switch__item">
+                <img class="top__img" src="images/cappuccino.png" onclick="imgSlider('images/cappuccino.png')" alt="Чашка кофе Капучино" />
+              </li>
+
+
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu vs" id="menu">
+        <div class="container">
+          <h2 class="title">Наше Меню</h2>
+
+          <div class="filter-menu">
+            <button class="filter-menu__link" type="button" data-filter="all">Все</button>
+            <button class="filter-menu__link" type="button" data-filter=".category-a">Напитки</button>
+            <button class="filter-menu__link" type="button" data-filter=".category-b">Еда</button>
+          </div>
+
+          <ul class="menu__inner">
+            <li class="menu__box mix category-a">
+              <div class="menu__info">
+                <div class="menu__name">
+                  <span>Эспрессо</span>
+                </div>
+                <div class="menu__price">300 рублей</div>
+              </div>
+              <span class="menu__description"> Классичесский крепкий вкус кофе </span>
+            </li>
+
+            <li class="menu__box mix category-a">
+              <div class="menu__info">
+                <div class="menu__name">
+                  <span>Капучино</span>
+                </div>
+                <div class="menu__price">300 рублей</div>
+              </div>
+              <span class="menu__description"> Классичесский крепкий вкус кофе с добавлением молока. </span>
+            </li>
+
+            <li class="menu__box mix category-a">
+              <div class="menu__info">
+                <div class="menu__name">
+                  <span>Латте</span>
+                </div>
+                <div class="menu__price">300 рублей</div>
+              </div>
+              <span class="menu__description"> Мягкий вкус кофе с молоком. </span>
+            </li>
+
+            <li class="menu__box mix category-a">
+              <div class="menu__info">
+                <div class="menu__name">
+                  <span>Чай классический</span>
+                </div>
+                <div class="menu__price">180 рублей</div>
+              </div>
+              <span class="menu__description"> Классический вкус черного чая. </span>
+            </li>
+
+            <li class="menu__box mix category-a">
+              <div class="menu__info">
+                <div class="menu__name">
+                  <span>Чай жасминовый</span>
+                </div>
+                <div class="menu__price">170 рублей</div>
+              </div>
+              <span class="menu__description"> Зеленный чай </span>
+            </li>
+
+            <li class="menu__box mix category-a">
+              <div class="menu__info">
+                <div class="menu__name">
+                  <span>Чай Облепиховый</span>
+                </div>
+                <div class="menu__price">170 рублей</div>
+              </div>
+              <span class="menu__description"> Классический вкус черного чая. </span>
+            </li>
+
+            <li class="menu__box mix category-a">
+              <div class="menu__info">
+                <div class="menu__name">
+                  <span>Чай Алтайский</span>
+                </div>
+                <div class="menu__price">170 рублей</div>
+              </div>
+              <span class="menu__description"> В этом чае собраны различные травы Алтая. </span>
+            </li>
+
+            <li class="menu__box mix category-b">
+              <div class="menu__info">
+                <div class="menu__name">
+                  <span>Блинчики с Яблоком 150 г</span>
+                </div>
+                <div class="menu__price">180 рублей</div>
+              </div>
+              <span class="menu__description"> Блинчики с Яблоком </span>
+            </li>
+
+            <li class="menu__box mix category-b">
+              <div class="menu__info">
+                <div class="menu__name">
+                  <span>Блинчики с Шоколадом 150 г</span>
+                </div>
+                <div class="menu__price">180 рублей</div>
+              </div>
+              <span class="menu__description"> Блинчики с Шоколадом </span>
+            </li>
+
+            <li class="menu__box mix category-b">
+              <div class="menu__info">
+                <div class="menu__name">
+                  <span>Чискейк "НЬЮ-ЙОРК" 125 г</span>
+                </div>
+                <div class="menu__price">250 рублей</div>
+              </div>
+              <span class="menu__description"> Знаменитый Чискейк "НЬЮ-ЙОРК" </span>
+            </li>
+
+            <li class="menu__box mix category-b">
+              <div class="menu__info">
+                <div class="menu__name">
+                  <span>Торт "НАПОЛЕОН" 125 г</span>
+                </div>
+                <div class="menu__price">210 рублей</div>
+              </div>
+              <span class="menu__description"> МнослойныйТорт "НАПОЛЕОН" </span>
+            </li>
+
+            <li class="menu__box mix category-b">
+              <div class="menu__info">
+                <div class="menu__name">
+                  <span>Пицца "Классическая"</span>
+                </div>
+                <div class="menu__price">210 рублей</div>
+              </div>
+              <span class="menu__description"> Классическая пицца, с помидорами, луком, огурцами и ветчиной. </span>
+            </li>
+
+            <li class="menu__box mix category-b">
+              <div class="menu__info">
+                <div class="menu__name">
+                  <span>Пицца "Пеперони"</span>
+                </div>
+                <div class="menu__price">210 рублей</div>
+              </div>
+              <span class="menu__description"> пицца с помидорами, луком, огурцами и ветчиной. </span>
+            </li>
+
+            <li class="menu__box mix category-b">
+              <div class="menu__info">
+                <div class="menu__name">
+                  <span>Пицца "Вегетарианская"</span>
+                </div>
+                <div class="menu__price">210 рублей</div>
+              </div>
+              <span class="menu__description">Пицца с помидорами, луком, огурцами и креветками. </span>
+            </li>
+
+            <li class="menu__box mix category-b">
+              <div class="menu__info">
+                <div class="menu__name">
+                  <span>Пончики "Класические"</span>
+                </div>
+                <div class="menu__price">150 рублей</div>
+              </div>
+              <span class="menu__description">Пончики с каромельной глазурью посыпанные сахарной пудрой. </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="stock vs" id="stock">
+        <div class="container">
+          <h2 class="title">Акции</h2>
+          <div class="stock__inner">
+            <div class="stock__box">
+              <a class="stock__link" href="#">
+                <img src="images/stock/stock-1.jpg" alt="" />
+                <h3 class="stock__subtitle">Пицца "Вегетарианская"</h3>
+                <span class="stock__text"
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, vitae mollitia aspernatur perspiciatis
+                  possimus quod.
+                </span>
+              </a>
+            </div>
+
+            <div class="stock__box">
+              <a class="stock__link" href="#">
+                <img src="images/stock/stock-2.jpg" alt="" />
+                <h3 class="stock__subtitle">Пончики</h3>
+                <span class="stock__text"> Пончики с каромельной глазурью посыпанные сахарной пудрой. </span>
+              </a>
+            </div>
+
+            <div class="stock__box">
+              <a class="stock__link" href="#">
+                <img src="images/stock/bakery.jpg" alt="" />
+                <h3 class="stock__subtitle">Покупки утром</h3>
+                <span class="stock__text"> Устром с 10 до 12 у нас скидки на все меню 30%</span>
+              </a>
+            </div>
+
+            <div class="stock__box">
+              <a class="stock__link" href="#">
+                <img src="images/stock/stock-3.jpg" alt="" />
+                <h3 class="stock__subtitle">ПИроженные</h3>
+                <span class="stock__text"> Разнообразные пироженные. </span>
+              </a>
+            </div>
+
+            <div class="stock__box">
+              <a class="stock__link" href="#">
+                <img src="images/stock/stock-4.jpg" alt="" />
+                <div class="stock__info">
+                  <h3 class="stock__subtitle">Торты</h3>
+                  <span class="stock__text"> В нашем кофетерии вы найдете огромный выбор кондитерских изделий. </span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bonus vs" id="bonus">
+        <div class="container">
+          <h2 class="title title--white">Бонусы для наших клиентов</h2>
+
+          <ul class="bonus__list">
+            <li class="bonus__item bonus__item--gift">Подарки для клиектов</li>
+            <li class="bonus__item bonus__item--sale">Актуальные скидки</li>
+            <li class="bonus__item bonus__item--application">Удобное Приложение</li>
+          </ul>
+
+          <div class="bonus__box">
+            <img src="images/phone.png" alt="" />
+
+            <div class="bonus__info">
+              <p class="bonus__text">
+                Мы предоставляем карту лояльности для наших клиектов. Большой список привелегий нашей карты - это выбор
+                наших покупателей. Оормите карту и расплачивайтесь бонусами за покупки. У нас есть собственное
+                приложения, так что вы сможете узнать сколько балов у вас на карте.
+              </p>
+
+              <ul>
+                <li>
+                  <span>Бонусы </span>
+                  <p>
+                    Каждый раз когда вы оплачиваете покупки в нашей кафе, на вашу карту начисляются бонусы. Бонусами
+                    можно оплатить до 50% заказа.
+                  </p>
+                </li>
+
+                <li>
+                  <span>Оповещения </span>
+                  <p>
+                    В нашей кофетерии постоянно проводятся акции и скидки, если вы участник программы, мы вам пришлем
+                    сообения об акциях.
+                  </p>
+                </li>
+
+                <li>
+                  <span>Скидки в магазинах партнерах</span>
+                  <p>Ваша баллы можно будет потратить в магазинах наших партнеров.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="bonus__subtitle">Как стать участником программы</h3>
+          <ul class="bonus__programs">
+            <li class="bonus__program">
+              <div class="bonus__circle"><span>1</span></div>
+              <span> Скачайте и установите наше приложение</span>
+            </li>
+
+            <li class="bonus__program">
+              <div class="bonus__circle"><span>2</span></div>
+              <span> Зарегистрируйтесь в нашей системе</span>
+            </li>
+
+            <li class="bonus__program">
+              <div class="bonus__circle"><span>3</span></div>
+              <span> Вы участник нашей программы</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="delivery vs" id="delivery">
+        <div class="container">
+          <h2 class="title">Доставка</h2>
+          <div class="delivery__inner">
+            <div class="delivery__top">
+              <img src="images/delivery.png" alt="Пакет из магазина" />
+
+              <div class="delivery__info">
+                <h3>Наша служба доставки работает быстро и эффективно.</h3>
+                <ul>
+                  <li>
+                    <span>Доставка</span>
+                    <p>Мы работаем по Москве и ближайщему Подмосковью.</p>
+                  </li>
+                  <li>
+                    <span>Сколько времени осуществляется доставка</span>
+                    <p>Мы доставляем ваш заказ в районе 1 часа.</p>
+                  </li>
+                  <li>
+                    <span>Время доставки</span>
+                    <p>Наша доставка работает с 12 -00 до 23 - 00</p>
+                  </li>
+
+                  <li>
+                    <span>Информация о доставке</span>
+                    <p>Если у вас есть наша карта, то отслеживать доставку можно в нашем приложении.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews vs" id="reviews">
+        <div class="container">
+          <h2 class="title">Отзывы</h2>
+
+          <div class="reviews__inner">
+            
+            <div class="reviews__box">
+              <img class="reviews__img" src="images/icons/avatar.png" alt="Аватар" />
+              <blockquote class="blockquote">
+                <cite class="blockquote__name">Патрик</cite>
+                <p>Бываю в кафе часто, отлично меню, красивый интерьер. Бываю сдесь с друзьями, все довольны.</p>
+              </blockquote>
+            </div>
+
+            <div class="reviews__box">
+              <img class="reviews__img" src="images/icons/avatar.png" alt="Аватар" />
+              <blockquote class="blockquote">
+                <cite class="blockquote__name">Кристина</cite>
+                <p>
+                  Большое разнообразное меню, если меню для вегетарианцев, отличный персонал, хочется приходить сюда
+                  чаще, атмосфера кафе потрясающая.
+                </p>
+              </blockquote>
+            </div>
+
+            <div class="reviews__box">
+              <img class="reviews__img" src="images/icons/avatar.png" alt="Аватар" />
+              <blockquote class="blockquote">
+                <cite class="blockquote__name">Сюзанна</cite>
+                <p>
+                  Ставлю завидению 5 баллов. Очень вкусные круасаны, кафе находится рядом с моей работой, поэтому часто
+                  заходим сюда с коллегами. Есть доставка, работают быстро. Всем советую.
+                </p>
+              </blockquote>
+            </div>
+
+            <div class="reviews__box">
+              <img class="reviews__img" src="images/icons/avatar.png" alt="Аватар" />
+              <blockquote class="blockquote">
+                <cite class="blockquote__name">Патрик</cite>
+                <p>Бываю в кафе часто, отлично меню, красивый интерьер. Бываю сдесь с друзьями, все довольны.</p>
+              </blockquote>
+            </div>
+
+            <div class="reviews__box">
+              <img class="reviews__img" src="images/icons/avatar.png" alt="Аватар" />
+              <blockquote class="blockquote">
+                <cite class="blockquote__name">Кристина</cite>
+                <p>
+                  Большое разнообразное меню, если меню для вегетарианцев, отличный персонал, хочется приходить сюда
+                  чаще, атмосфера кафе потрясающая.
+                </p>
+              </blockquote>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="container">
+        Медиарусурсы
+
+        <div>
+          Icons made by <a href="" title="bukeicon">bukeicon</a> from
+          <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        </div>
+
+       
+        <div>
+          Icons made by <a href="https://www.flaticon.com/authors/itim2101" title="itim2101">itim2101</a> from
+          <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        </div>
+
+      
+        <div>
+          Icons made by <a href="https://www.flaticon.com/authors/uniconlabs" title="Uniconlabs">Uniconlabs</a> from
+          <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        </div>
+
+        <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+        <a href="https://www.freepik.com/photos/food">Food photo created by freepik - www.freepik.com</a>
+
+      </div>
+    </footer>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

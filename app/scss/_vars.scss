@@ -1,0 +1,20 @@
+$white:#fff;
+$black:#252525;
+$accent:#4d8b55;
+$top-bg:#3f3838;
+$orange:#ec8f03;
+$font-m:'Montserrat Alternates', sans-serif;
+$box-shadow: 0 15px 15px rgba(0,0,0,.05);
+
+@mixin clamp($row) {
+  -webkit-line-clamp: $row;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 30px;
+  }

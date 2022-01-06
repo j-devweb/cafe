@@ -1,0 +1,177 @@
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 992px) {
+
+#menu-btn {
+  display: block;
+
+  &.active {
+
+  }
+}
+  .menu-top {
+
+    &__list {
+      background-color: $top-bg;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      text-align: center;
+      width: 100%;
+      z-index: 100;
+      padding-top: 50px;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      transition: 0.5s;
+
+      &.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    &__item {
+      padding: 5px 0;
+    }
+
+    &__item + .menu-top__item {
+      margin-left: 0;
+    }
+
+    &__link {
+     display: block;
+     text-transform: uppercase;
+
+      &:before {
+        display: none;
+      }
+
+      &:hover::before {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  .bonus {
+    &__list {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      margin: 10px;
+    }
+
+    &__box {
+      justify-content: center;
+    }
+
+    &__info{
+      padding-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  .menu {
+    &__inner {
+      @include grid(300px);
+    }
+
+    &__info {
+      max-width: 100%;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .top__inner {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 80px;
+    height: 100%;
+  }
+
+  .social {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    width: 200px;
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    &__item {
+      line-height: 50px;
+    }
+  
+    &__link {
+    }
+  
+    i {
+      font-size: 35px;
+      color: $white;
+  
+      &:hover {
+        opacity: 50%;
+      }
+    }
+  }
+
+  .switch {
+   display: none;
+  }
+
+  .menu {
+    &__inner {
+      padding: 0px;
+    }
+  }
+
+  .filter-menu {
+    margin-bottom: 30px;
+    &__link {
+      margin-bottom: 10px;
+    }
+    
+  }
+
+  .bonus__programs {
+flex-wrap: wrap;
+  }
+
+  .bonus__program {
+margin: 10px;
+  }
+
+  .bonus__program:not(:last-child):after {
+    display: none;
+  }
+
+.delivery__top {
+  flex-wrap: wrap;
+}
+
+  .reviews__box {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .menu {
+  
+    &__box {
+     flex-wrap: wrap;
+    }
+
+    &__info {
+     flex-wrap: wrap;
+    }
+
+  }
+}
